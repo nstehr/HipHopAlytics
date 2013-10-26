@@ -1,0 +1,6 @@
+{
+   "East Coast":["New York","New Jersey","New Hampshire","Connecticut","Maryland","Massachusetts","Pennsylvania","Rhode Island","Vermont","Maine","Delaware","District of Columbia"],
+    "West Coast":["California","Oregon","Washington","Nevada","Arizona","New Mexico"],
+    "Southern":["Florida","Texas","Georgia","Louisiana","Tennessee","Alabama","Kentucky","North Carolina","South Carolina","Mississippi","Virginia","West Virginia","Oklahoma","Arkansas"],
+    "Midwest":["Michigan","Illinois","Indiana","Iowa","Minnesota","Missouri","Nebraska","North Dakota","South Dakota","Wisconsin","Ohio","Montana","Idaho","Wyoming","Utah","Kansas","Colorado"]
+}

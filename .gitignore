@@ -1,0 +1,5 @@
+*.pyc
+.Python
+.DS_Store
+.DS_Store?
+rappers_pretty.json
