@@ -28,7 +28,8 @@
                     "niggas",
                     "nigga"
                 ],
-                "rank": 0
+                "rank": 0,
+                "idf_score": 0.3136598043904103
             },
             {
                 "commonWord": "time",
@@ -45,7 +46,8 @@
                     "niggas",
                     "shit"
                 ],
-                "rank": 1
+                "rank": 1,
+                "idf_score": 0.3698248497084073
             },
             {
                 "commonWord": "shit",
@@ -71,7 +73,8 @@
                     "nigga",
                     "niggas"
                 ],
-                "rank": 2
+                "rank": 2,
+                "idf_score": 0.3714483823726209
             },
             {
                 "commonWord": "fuck",
@@ -99,7 +102,8 @@
                     "nigga",
                     "niggas"
                 ],
-                "rank": 3
+                "rank": 3,
+                "idf_score": 0.38802652040590163
             },
             {
                 "commonWord": "niggas",
@@ -143,7 +147,8 @@
                     "man",
                     "nigga"
                 ],
-                "rank": 4
+                "rank": 4,
+                "idf_score": 0.4052626904775304
             },
             {
                 "commonWord": "love",
@@ -165,7 +170,8 @@
                     "keep",
                     "ya"
                 ],
-                "rank": 5
+                "rank": 5,
+                "idf_score": 0.41594260116232773
             },
             {
                 "commonWord": "tell",
@@ -178,10 +184,11 @@
                     "need",
                     "bitch",
                     "me,",
-                    "wanna",
-                    "ya"
+                    "ya",
+                    "wanna"
                 ],
-                "rank": 6
+                "rank": 6,
+                "idf_score": 0.4213826866806842
             },
             {
                 "commonWord": "keep",
@@ -193,7 +200,8 @@
                     "ya",
                     "nigga"
                 ],
-                "rank": 7
+                "rank": 7,
+                "idf_score": 0.42874378632705323
             },
             {
                 "commonWord": "nigga",
@@ -220,7 +228,8 @@
                     "wanna",
                     "bitch"
                 ],
-                "rank": 8
+                "rank": 8,
+                "idf_score": 0.43060372271117714
             },
             {
                 "commonWord": "wanna",
@@ -236,7 +245,8 @@
                     "me,",
                     "ya"
                 ],
-                "rank": 9
+                "rank": 9,
+                "idf_score": 0.43812416139730814
             },
             {
                 "commonWord": "man",
@@ -251,7 +261,8 @@
                     "really",
                     "right"
                 ],
-                "rank": 10
+                "rank": 10,
+                "idf_score": 0.44193378654407345
             },
             {
                 "commonWord": "think",
@@ -259,7 +270,8 @@
                     "really",
                     "me,"
                 ],
-                "rank": 11
+                "rank": 11,
+                "idf_score": 0.4438512045897952
             },
             {
                 "commonWord": "right",
@@ -271,7 +283,8 @@
                     "need",
                     "ya"
                 ],
-                "rank": 12
+                "rank": 12,
+                "idf_score": 0.4438512045897952
             },
             {
                 "commonWord": "me,",
@@ -282,7 +295,8 @@
                     "feel",
                     "better"
                 ],
-                "rank": 13
+                "rank": 13,
+                "idf_score": 0.44965478068903547
             },
             {
                 "commonWord": "need",
@@ -291,7 +305,8 @@
                     "really",
                     "life"
                 ],
-                "rank": 14
+                "rank": 14,
+                "idf_score": 0.4516066692865575
             },
             {
                 "commonWord": "life",
@@ -300,14 +315,16 @@
                     "death",
                     "live"
                 ],
-                "rank": 15
+                "rank": 15,
+                "idf_score": 0.4675458703880053
             },
             {
                 "commonWord": "through",
                 "frequentAppears": [
                     "came"
                 ],
-                "rank": 16
+                "rank": 16,
+                "idf_score": 0.47367718843950346
             },
             {
                 "commonWord": "hit",
@@ -316,7 +333,8 @@
                     "'em",
                     "bitch"
                 ],
-                "rank": 17
+                "rank": 17,
+                "idf_score": 0.47781335762614213
             },
             {
                 "commonWord": "bitch",
@@ -333,14 +351,16 @@
                     "ass",
                     "ya"
                 ],
-                "rank": 18
+                "rank": 18,
+                "idf_score": 0.4819892982802784
             },
             {
                 "commonWord": "here",
                 "frequentAppears": [
                     "comes"
                 ],
-                "rank": 19
+                "rank": 19,
+                "idf_score": 0.5079250323746781
             }
         ],
         "numSongs": 628,
@@ -443,7 +463,8 @@
                     "shit",
                     "niggas"
                 ],
-                "rank": 0
+                "rank": 0,
+                "idf_score": 0.24945315028894813
             },
             {
                 "commonWord": "shit",
@@ -505,7 +526,8 @@
                     "fuck",
                     "niggas"
                 ],
-                "rank": 1
+                "rank": 1,
+                "idf_score": 0.25629257481925355
             },
             {
                 "commonWord": "niggas",
@@ -589,7 +611,8 @@
                     "bitch",
                     "fuck"
                 ],
-                "rank": 2
+                "rank": 2,
+                "idf_score": 0.28847725819065484
             },
             {
                 "commonWord": "fuck",
@@ -644,7 +667,8 @@
                     "never",
                     "bitch"
                 ],
-                "rank": 3
+                "rank": 3,
+                "idf_score": 0.28847725819065484
             },
             {
                 "commonWord": "never",
@@ -672,7 +696,8 @@
                     "ya",
                     "bitch"
                 ],
-                "rank": 4
+                "rank": 4,
+                "idf_score": 0.3340972920380751
             },
             {
                 "commonWord": "bitch",
@@ -699,7 +724,8 @@
                     "wanna",
                     "ya"
                 ],
-                "rank": 5
+                "rank": 5,
+                "idf_score": 0.3480629481748989
             },
             {
                 "commonWord": "man",
@@ -718,7 +744,8 @@
                     "tell",
                     "ya"
                 ],
-                "rank": 6
+                "rank": 6,
+                "idf_score": 0.3610279253392666
             },
             {
                 "commonWord": "need",
@@ -736,7 +763,8 @@
                     "ya",
                     "tell"
                 ],
-                "rank": 7
+                "rank": 7,
+                "idf_score": 0.36989138567057167
             },
             {
                 "commonWord": "tell",
@@ -758,7 +786,8 @@
                     "wanna",
                     "ya"
                 ],
-                "rank": 8
+                "rank": 8,
+                "idf_score": 0.36989138567057167
             },
             {
                 "commonWord": "keep",
@@ -775,10 +804,11 @@
                     "me,",
                     "gotta",
                     "love",
-                    "ya",
-                    "ass"
+                    "ass",
+                    "ya"
                 ],
-                "rank": 9
+                "rank": 9,
+                "idf_score": 0.37138637675752284
             },
             {
                 "commonWord": "wanna",
@@ -806,7 +836,8 @@
                     "ass",
                     "ya"
                 ],
-                "rank": 10
+                "rank": 10,
+                "idf_score": 0.38662634331425966
             },
             {
                 "commonWord": "call",
@@ -817,7 +848,8 @@
                     "'em",
                     "it,"
                 ],
-                "rank": 11
+                "rank": 11,
+                "idf_score": 0.3944516808262163
             },
             {
                 "commonWord": "hit",
@@ -834,7 +866,8 @@
                     "ya",
                     "gotta"
                 ],
-                "rank": 12
+                "rank": 12,
+                "idf_score": 0.3976217276157229
             },
             {
                 "commonWord": "time",
@@ -844,7 +877,8 @@
                     "money",
                     "right"
                 ],
-                "rank": 13
+                "rank": 13,
+                "idf_score": 0.4040320946540709
             },
             {
                 "commonWord": "right",
@@ -862,7 +896,8 @@
                     "ass",
                     "money"
                 ],
-                "rank": 14
+                "rank": 14,
+                "idf_score": 0.4056495806276901
             },
             {
                 "commonWord": "ass",
@@ -878,7 +913,8 @@
                     "love",
                     "ya"
                 ],
-                "rank": 15
+                "rank": 15,
+                "idf_score": 0.40890273802541194
             },
             {
                 "commonWord": "love",
@@ -895,7 +931,8 @@
                     "it,",
                     "ya"
                 ],
-                "rank": 16
+                "rank": 16,
+                "idf_score": 0.40890273802541194
             },
             {
                 "commonWord": "gotta",
@@ -908,7 +945,8 @@
                     "it,",
                     "ya"
                 ],
-                "rank": 17
+                "rank": 17,
+                "idf_score": 0.4171438673181979
             },
             {
                 "commonWord": "money",
@@ -924,7 +962,8 @@
                     "new",
                     "big"
                 ],
-                "rank": 18
+                "rank": 18,
+                "idf_score": 0.42385125132518436
             },
             {
                 "commonWord": "me,",
@@ -936,7 +975,8 @@
                     "baby",
                     "ya"
                 ],
-                "rank": 19
+                "rank": 19,
+                "idf_score": 0.43238383387493484
             }
         ],
         "numSongs": 682,
@@ -998,7 +1038,8 @@
                     "nigga",
                     "niggas"
                 ],
-                "rank": 0
+                "rank": 0,
+                "idf_score": 0.27168323013582446
             },
             {
                 "commonWord": "fuck",
@@ -1051,7 +1092,8 @@
                     "niggas",
                     "nigga"
                 ],
-                "rank": 1
+                "rank": 1,
+                "idf_score": 0.27789641882308175
             },
             {
                 "commonWord": "nigga",
@@ -1113,7 +1155,8 @@
                     "bitch",
                     "niggas"
                 ],
-                "rank": 2
+                "rank": 2,
+                "idf_score": 0.28040679854068135
             },
             {
                 "commonWord": "niggas",
@@ -1167,7 +1210,8 @@
                     "never",
                     "bitch"
                 ],
-                "rank": 3
+                "rank": 3,
+                "idf_score": 0.29188661622411144
             },
             {
                 "commonWord": "never",
@@ -1185,7 +1229,8 @@
                     "time",
                     "bitch"
                 ],
-                "rank": 4
+                "rank": 4,
+                "idf_score": 0.3212962455407406
             },
             {
                 "commonWord": "wanna",
@@ -1201,7 +1246,8 @@
                     "ya",
                     "ass"
                 ],
-                "rank": 5
+                "rank": 5,
+                "idf_score": 0.3633810336054453
             },
             {
                 "commonWord": "bitch",
@@ -1229,7 +1275,8 @@
                     "ya",
                     "ass"
                 ],
-                "rank": 6
+                "rank": 6,
+                "idf_score": 0.37574612454950695
             },
             {
                 "commonWord": "time",
@@ -1243,7 +1290,8 @@
                     "think",
                     "man"
                 ],
-                "rank": 7
+                "rank": 7,
+                "idf_score": 0.39334425698288855
             },
             {
                 "commonWord": "tell",
@@ -1259,7 +1307,8 @@
                     "need",
                     "ya"
                 ],
-                "rank": 8
+                "rank": 8,
+                "idf_score": 0.39992460229421006
             },
             {
                 "commonWord": "ass",
@@ -1274,7 +1323,8 @@
                     "hit",
                     "ya"
                 ],
-                "rank": 9
+                "rank": 9,
+                "idf_score": 0.4308360672752261
             },
             {
                 "commonWord": "me,",
@@ -1282,7 +1332,8 @@
                     "love",
                     "need"
                 ],
-                "rank": 10
+                "rank": 10,
+                "idf_score": 0.43801465190234945
             },
             {
                 "commonWord": "right",
@@ -1296,7 +1347,8 @@
                     "life",
                     "ya"
                 ],
-                "rank": 11
+                "rank": 11,
+                "idf_score": 0.4416489365574435
             },
             {
                 "commonWord": "man",
@@ -1308,7 +1360,8 @@
                     "money",
                     "need"
                 ],
-                "rank": 12
+                "rank": 12,
+                "idf_score": 0.4453138906438489
             },
             {
                 "commonWord": "need",
@@ -1317,7 +1370,8 @@
                     "new",
                     "money"
                 ],
-                "rank": 13
+                "rank": 13,
+                "idf_score": 0.4471580313422192
             },
             {
                 "commonWord": "think",
@@ -1327,7 +1381,8 @@
                     "fucking",
                     "better"
                 ],
-                "rank": 14
+                "rank": 14,
+                "idf_score": 0.4527379087230558
             },
             {
                 "commonWord": "love",
@@ -1348,7 +1403,8 @@
                     "real",
                     "ya"
                 ],
-                "rank": 15
+                "rank": 15,
+                "idf_score": 0.4564980575963626
             },
             {
                 "commonWord": "keep",
@@ -1358,7 +1414,8 @@
                     "money",
                     "ya"
                 ],
-                "rank": 16
+                "rank": 16,
+                "idf_score": 0.4602910466135017
             },
             {
                 "commonWord": "hit",
@@ -1371,7 +1428,8 @@
                     "'em",
                     "ya"
                 ],
-                "rank": 17
+                "rank": 17,
+                "idf_score": 0.4602910466135017
             },
             {
                 "commonWord": "real",
@@ -1379,12 +1437,14 @@
                     "g's",
                     "big"
                 ],
-                "rank": 18
+                "rank": 18,
+                "idf_score": 0.4699210305657948
             },
             {
                 "commonWord": "big",
                 "frequentAppears": [],
-                "rank": 19
+                "rank": 19,
+                "idf_score": 0.48176615976542597
             }
         ],
         "numSongs": 658,
@@ -1437,7 +1497,8 @@
                     "nigga",
                     "niggas"
                 ],
-                "rank": 0
+                "rank": 0,
+                "idf_score": 0.2591215212742226
             },
             {
                 "commonWord": "fuck",
@@ -1479,7 +1540,8 @@
                     "nigga",
                     "niggas"
                 ],
-                "rank": 1
+                "rank": 1,
+                "idf_score": 0.26692342836984245
             },
             {
                 "commonWord": "niggas",
@@ -1551,7 +1613,8 @@
                     "never",
                     "nigga"
                 ],
-                "rank": 2
+                "rank": 2,
+                "idf_score": 0.2682374822676737
             },
             {
                 "commonWord": "never",
@@ -1578,7 +1641,8 @@
                     "man",
                     "nigga"
                 ],
-                "rank": 3
+                "rank": 3,
+                "idf_score": 0.2816014438256552
             },
             {
                 "commonWord": "nigga",
@@ -1623,7 +1687,8 @@
                     "bitch",
                     "man"
                 ],
-                "rank": 4
+                "rank": 4,
+                "idf_score": 0.31545971108662263
             },
             {
                 "commonWord": "time",
@@ -1641,7 +1706,8 @@
                     "wanna",
                     "love"
                 ],
-                "rank": 5
+                "rank": 5,
+                "idf_score": 0.33343308209852346
             },
             {
                 "commonWord": "man",
@@ -1657,7 +1723,8 @@
                     "yo",
                     "love"
                 ],
-                "rank": 6
+                "rank": 6,
+                "idf_score": 0.3458423400803435
             },
             {
                 "commonWord": "keep",
@@ -1672,7 +1739,8 @@
                     "tell",
                     "love"
                 ],
-                "rank": 7
+                "rank": 7,
+                "idf_score": 0.3537821312711555
             },
             {
                 "commonWord": "through",
@@ -1683,7 +1751,8 @@
                     "hit",
                     "ya"
                 ],
-                "rank": 8
+                "rank": 8,
+                "idf_score": 0.38191770552562315
             },
             {
                 "commonWord": "love",
@@ -1702,7 +1771,8 @@
                     "me,",
                     "wanna"
                 ],
-                "rank": 9
+                "rank": 9,
+                "idf_score": 0.39055207504982486
             },
             {
                 "commonWord": "me,",
@@ -1717,7 +1787,8 @@
                     "look",
                     "tell"
                 ],
-                "rank": 10
+                "rank": 10,
+                "idf_score": 0.3993615958068317
             },
             {
                 "commonWord": "wanna",
@@ -1730,7 +1801,8 @@
                     "tell",
                     "bitch"
                 ],
-                "rank": 11
+                "rank": 11,
+                "idf_score": 0.3993615958068317
             },
             {
                 "commonWord": "tell",
@@ -1745,7 +1817,8 @@
                     "better",
                     "gotta"
                 ],
-                "rank": 12
+                "rank": 12,
+                "idf_score": 0.40114514854724903
             },
             {
                 "commonWord": "right",
@@ -1757,7 +1830,8 @@
                     "better",
                     "hit"
                 ],
-                "rank": 13
+                "rank": 13,
+                "idf_score": 0.4065401804339551
             },
             {
                 "commonWord": "it,",
@@ -1768,7 +1842,8 @@
                     "better",
                     "call"
                 ],
-                "rank": 14
+                "rank": 14,
+                "idf_score": 0.4269159398056732
             },
             {
                 "commonWord": "new",
@@ -1782,7 +1857,8 @@
                     "old",
                     "bitch"
                 ],
-                "rank": 15
+                "rank": 15,
+                "idf_score": 0.4288165751451074
             },
             {
                 "commonWord": "need",
@@ -1792,7 +1868,8 @@
                     "girl",
                     "life"
                 ],
-                "rank": 16
+                "rank": 16,
+                "idf_score": 0.4326429829981603
             },
             {
                 "commonWord": "bitch",
@@ -1806,7 +1883,8 @@
                     "hit",
                     "ya"
                 ],
-                "rank": 17
+                "rank": 17,
+                "idf_score": 0.4365034038113984
             },
             {
                 "commonWord": "hit",
@@ -1814,7 +1892,8 @@
                     "em",
                     "'em"
                 ],
-                "rank": 18
+                "rank": 18,
+                "idf_score": 0.4384465590974005
             },
             {
                 "commonWord": "real",
@@ -1823,7 +1902,8 @@
                     "shit,",
                     "life"
                 ],
-                "rank": 19
+                "rank": 19,
+                "idf_score": 0.4423591484604505
             }
         ],
         "numSongs": 612,

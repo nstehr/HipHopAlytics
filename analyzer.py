@@ -39,6 +39,7 @@ def main():
         artists = set([song['artist'] for song in songs])
         idf_calc = calcIDF(region,song_count)
         common_words = [word[0] for word in idf_calc]
+        words_to_score = dict(idf_calc)
         
         print "Number of Songs: %d" % song_count
         print "Number of Artists: %d" % len(artists)
@@ -63,6 +64,7 @@ def main():
             print "Words that commonly appear with %s:%s" % (common_word,",".join(set(freq_appears)))
             common_word_freq_map['commonWord'] = common_word
             common_word_freq_map['rank'] = idx
+            common_word_freq_map['idf_score'] = words_to_score[common_word]
             common_word_freq_map['frequentAppears'] = freq_appears
             common_word_data.append(common_word_freq_map)
         region_data['commonWords'] = common_word_data
