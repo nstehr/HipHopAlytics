@@ -28,6 +28,36 @@
 .hidden{
 	fill: transparent;
 }
+#mapAndBlurb{
+	display:flex;
+    flex-wrap:wrap;
+}
+#mapAndBlurb > div{
+	flex: 1 0 20px;
+}
+#map{
+	padding:10px;
+    margin:10px;
+}
+
+#top20Lists{
+    display:flex;
+    flex-wrap:wrap;
+}
+.wordList{
+	flex: 1 0 200px;
+}
+.wordList li{
+	width:50px;
+}
+.wordHover{
+   font-weight:900;
+   font-size:140%;
+}
+.wordFade{
+	opacity:0.2;
+}
+
 </style>
 <html>
 <head>
@@ -35,7 +65,35 @@
 
 </head>
 <body>
-	<div id="map"></div>
+    <div id="container">
+	    <div id="mapAndBlurb">
+	        <div id="map"></div>
+	        <div id="blurb">
+	            <h2>Amazingly Cool Title Goes Here</h2>
+	            <p>
+	            The bizzle nec own yo' izzle bizzle bibendum owned. Vivamizzle uhuh ... yih! tortor vizzle massa. Fo shizzle malesuada ornare magna. Sizzle commodo, nisl nec yo egestizzle, magna dope vestibulum ligula, shit auctizzle go to hizzle dolor dope augue. Maecenas izzle elizzle cool break it down eros adipiscing sagittizzle. Sure tempizzle pede ut sizzle. In rhoncus pimpin' leo. Lorizzle i saw beyonces tizzles and my pizzle went crizzle dolor sit izzle, mofo adipiscing that's the shizzle. Phasellizzle nisi shut the shizzle up, posuere crazy amet, facilisizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle, tristique , libero. Yo semper faucibizzle dizzle. Ut nizzle fo shizzle my nizzle. Nunc dang risizzle doggy diam mah nizzle tellivizzle. Quisque condimentum sure laoreet nunc. Aenizzle sodales, nisi quis stuff tellivizzle, lectus dizzle commodo felis, nizzle my shizz erizzle nisl quis fo shizzle my nizzle. Vivamizzle boofron quizzle, i saw beyonces tizzles and my pizzle went crizzle sit pizzle, ornare tellivizzle, pulvinizzle pulvinar, felis.
+	            </p>
+	        </div>
+	    </div>
+	    <div id="top20Lists">
+	        <div class="wordList">
+	            <h3>West Coast</h3>
+	            <ol id="westCoastTop20"></ol>
+	         </div>
+	        <div class="wordList">
+	            <h3>Midwest</h3>
+	            <ol id="midwestTop20"></ol>
+	        </div>
+	        <div class="wordList">
+	            <h3>Southern</h3>
+	            <ol id="southernTop20"></ol>
+	        </div>
+	        <div class="wordList">
+	            <h3>East Coast</h3>
+	            <ol id="eastCoastTop20"></ol>
+	        </div>
+	    </div>
+	</div>
 <script type="text/javascript" src="js/require_config.DEBUG.js"></script>
 <script type="text/javascript" src="lib/require.js" data-main="visualize.js"></script>
 </body>
