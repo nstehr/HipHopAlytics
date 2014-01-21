@@ -6,7 +6,6 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
     $(function ()
     {
 	    var regions = ["East Coast","West Coast","Midwest","Southern"];
-	    console.log(_);
       	var width = 960,
 		    height = 420;
  
@@ -27,8 +26,19 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
 
         function dataLoaded(error,us,regionData,lyricData){
 	         drawMap(us,regionData);
-	         buildTopWordLists(lyricData);			
+	         buildTopWordLists(lyricData);
+	         renderWordBarCharts(lyricData);			
         }
+
+        function renderWordBarCharts(lyricData){
+        	var midwestTopWords = _.pluck(lyricData["Midwest"].commonWords,"commonWord");
+        	var southernTopWords = _.pluck(lyricData["Southern"].commonWords,"commonWord");
+        	var eastCoastTopWords = _.pluck(lyricData["East Coast"].commonWords,"commonWord");
+        	var westCoastTopWords = _.pluck(lyricData["West Coast"].commonWords,"commonWord");
+
+        	var uniqueWords = _.union(midwestTopWords,southernTopWords,eastCoastTopWords,westCoastTopWords);
+        }
+
 
         function buildTopWordLists(lyricData){
         	var midwestTopWords = lyricData["Midwest"];
@@ -44,8 +54,9 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
              var wordListItems = $('#top20Lists li');
 
              function mouseEnter(){
-             	var word = $(this)[0].innerText;
-             	var matchingWords =  _.where(wordListItems,{"innerText":word});
+
+             	var word = $(this).text();
+             	var matchingWords =  _.filter(wordListItems, function(item){return $(item).text() === word;});
              	var restOfWords = _.difference(wordListItems,matchingWords);
              	$(matchingWords).addClass("wordHover");
              	$(restOfWords).addClass("wordFade");
