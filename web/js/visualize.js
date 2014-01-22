@@ -31,14 +31,113 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
         }
 
         function renderWordBarCharts(lyricData){
-        	var midwestTopWords = _.pluck(lyricData["Midwest"].commonWords,"commonWord");
-        	var southernTopWords = _.pluck(lyricData["Southern"].commonWords,"commonWord");
-        	var eastCoastTopWords = _.pluck(lyricData["East Coast"].commonWords,"commonWord");
-        	var westCoastTopWords = _.pluck(lyricData["West Coast"].commonWords,"commonWord");
 
-        	var uniqueWords = _.union(midwestTopWords,southernTopWords,eastCoastTopWords,westCoastTopWords);
+            var words = createWordUnion(lyricData);
+            for (var word in words){
+            	renderWordBars(word,words[word]);
+            }   
+        }
+        function renderWordBars(word,wordData){
+        	
+            
+        	var barChartWidth = 60;
+        	var barChartHeight = 100;
+        	var barWidth = barChartWidth/wordData.length;
+        	
+        	var barGraph = d3.select("#wordBars").append("svg")
+        	                .attr("width", barChartWidth)
+        	                .attr("height", barChartHeight)
+        	                .attr("class", "bars");
+
+           var x = d3.scale.linear().domain([0, wordData.length]).range([0, barChartWidth]);
+	       var y = d3.scale.linear().domain([1, d3.min(wordData, function(d) { return d.idf_score; })])
+			  .rangeRound([0, barChartHeight]);
+
+		var barGroup = barGraph.select(".bars");
+	    if(barGroup.empty()){
+		    barGroup = barGraph.append("g");
+		    
+	    }
+	
+	  var bars = barGroup.selectAll("rect").data(wordData,function(d){return d.region;});
+	
+	  bars
+	   .enter()
+	   .append("rect")
+	   .attr("x", function(d, i) { return x(i); })
+	   .attr("y",  function(d) { return barChartHeight-y(d.idf_score); })
+       .attr("height", function(d) { return y(d.idf_score); })
+	   .attr("width", barWidth)
+	   .attr("stroke", "black")
+	   .attr("class", function(d){
+            if(d.region === "Midwest")
+            	return "midwest";
+            if(d.region === "East Coast")
+            	return "east-coast";
+            if(d.region === "West Coast")
+            	return "west-coast";
+            if(d.region === "Southern")
+            	return "southern";
+	    });
+
+	   barGroup.append("text")
+         .attr("x", 0)
+         .attr("y", barChartHeight - .5)
+         .text(word)
+         .style("fill", "black")
+         .style("stroke", "black");
+        	
         }
 
+ 
+        
+
+        function createWordUnion(lyricData){
+        	var words = {};
+        	var midwestCommonWords = lyricData["Midwest"].commonWords;
+            var southernCommonWords = lyricData["Southern"].commonWords;
+            var eastCoastCommonWords = lyricData["East Coast"].commonWords;
+            var westCoastCommonWords = lyricData["West Coast"].commonWords;
+
+            for (var i=0; i<midwestCommonWords.length;i++){
+                 var word = midwestCommonWords[i];
+                 word.region = "Midwest";
+                 words[word.commonWord] = [word];
+            }
+            
+            for (var i=0;i<southernCommonWords.length;i++){
+            	var word = southernCommonWords[i];
+            	word.region = "Southern";
+            	if(words[word.commonWord]){
+            		words[word.commonWord].push(word);
+            	}
+            	else {
+            		words[word.commonWord] = [word];
+            	}
+            }
+            for (var i=0;i<eastCoastCommonWords.length;i++){
+            	var word = eastCoastCommonWords[i];
+            	word.region = "East Coast";
+            	if(words[word.commonWord]){
+            		words[word.commonWord].push(word);
+            	}
+            	else {
+            		words[word.commonWord] = [word];
+            	}
+            }
+            for (var i=0;i<westCoastCommonWords.length;i++){
+            	var word = westCoastCommonWords[i];
+            	word.region = "West Coast";
+            	if(words[word.commonWord]){
+            		words[word.commonWord].push(word);
+            	}
+            	else {
+            		words[word.commonWord] = [word];
+            	}
+            }
+
+            return words;
+        }
 
         function buildTopWordLists(lyricData){
         	var midwestTopWords = lyricData["Midwest"];
