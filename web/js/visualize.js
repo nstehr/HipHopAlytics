@@ -104,6 +104,7 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
         	                .attr("height", barChartHeight)
         	                .attr("id", word)
         	                .attr("class", "bars");
+
             }  
 
         }
@@ -129,6 +130,7 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
 		var barGroup = barGraph.selectAll("g");
 	    if(barGroup.empty()){
 		    barGroup = barGraph.append("g");
+            barGroup.on("click",function(d){handleBarChartClicked(wordData);});
 		    
 	    }
 	
@@ -230,6 +232,30 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
             }
 
             return words;
+        }
+
+        function handleBarChartClicked(wordData){
+        	for(var i=0;i<wordData.length;i++){
+        		var word = wordData[i];
+        		var frequentAppears = word.frequentAppears;
+        		if(frequentAppears.length > 10){
+        			frequentAppears = _.first(frequentAppears, [10]);
+        		}
+        		var frequentAppearsStr = frequentAppears + "";
+        		console.log(frequentAppearsStr);
+                if(word.region == 'Midwest'){
+                  
+                }
+                else if(word.region == 'Southern'){
+
+                }
+                else if(word.region == 'East Coast'){
+
+                }
+                else if(word.region == 'West Coast'){
+
+                }
+        	}
         }
 
         function buildTopWordLists(lyricData){
