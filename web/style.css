@@ -1,0 +1,83 @@
+.states {
+  fill: none;
+  /*stroke: #ecf0f1;*/
+  stroke:#34495e;
+  stroke-linejoin: round;
+  stroke-width:5;
+}
+
+.east-coast{
+	fill:#1abc9c;
+	stroke: #1abc9c;
+}
+.west-coast{
+	fill:#2ecc71;
+	stroke: #2ecc71;
+}
+.southern{
+	fill:#3498db;
+	stroke: #3498db;
+}
+.midwest{
+	fill:#9b59b6;
+	stroke: #9b59b6;
+}
+.hidden{
+	fill: transparent;
+}
+
+#container{
+	font-family: 'Open Sans', sans-serif;
+}
+
+#mapAndBlurb{
+	display:flex;
+    flex-wrap:wrap;
+}
+#mapAndBlurb > div{
+	flex: 1 0 20px;
+}
+#map{
+	padding:10px;
+    margin:10px;
+}
+#barsBlurb{
+	padding:10px;
+    margin:10px;
+}
+
+#top20Lists{
+    display:flex;
+    flex-wrap:wrap;
+    margin: 30px;
+}
+#barsSection{
+	display:flex;
+    flex-wrap:wrap;
+}
+#barsSection > div{
+	flex: 1 0 20px;
+}
+#wordBars{
+	display:flex;
+	flex-wrap:wrap;
+	margin: 30px;
+	width: 900px;
+}
+.bars{
+	flex: 1 0 100px;
+	padding-top: 10px;
+}
+.wordList{
+	flex: 1 0 200px;
+}
+.wordList li{
+	width:50px;
+}
+.wordHover{
+   font-weight:900;
+   font-size:140%;
+}
+.wordFade{
+	opacity:0.2;
+}

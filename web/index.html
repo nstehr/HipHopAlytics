@@ -1,83 +1,9 @@
 <!doctype html>
-<style>
 
-.states {
-  fill: none;
-  /*stroke: #ecf0f1;*/
-  stroke:#34495e;
-  stroke-linejoin: round;
-  stroke-width:5;
-}
-
-.east-coast{
-	fill:#1abc9c;
-	stroke: #1abc9c;
-}
-.west-coast{
-	fill:#2ecc71;
-	stroke: #2ecc71;
-}
-.southern{
-	fill:#3498db;
-	stroke: #3498db;
-}
-.midwest{
-	fill:#9b59b6;
-	stroke: #9b59b6;
-}
-.hidden{
-	fill: transparent;
-}
-
-#container{
-	font-family: 'Open Sans', sans-serif;
-}
-
-#mapAndBlurb{
-	display:flex;
-    flex-wrap:wrap;
-}
-#mapAndBlurb > div{
-	flex: 1 0 20px;
-}
-#map{
-	padding:10px;
-    margin:10px;
-}
-
-#top20Lists{
-    display:flex;
-    flex-wrap:wrap;
-    margin: 30px;
-}
-#wordBars{
-	display:flex;
-	flex-wrap:wrap;
-	margin: 30px;
-	width: 900px;
-}
-.bars{
-	flex: 1 0 100px;
-	padding-top: 10px;
-}
-.wordList{
-	flex: 1 0 200px;
-}
-.wordList li{
-	width:50px;
-}
-.wordHover{
-   font-weight:900;
-   font-size:140%;
-}
-.wordFade{
-	opacity:0.2;
-}
-
-</style>
 <html>
 <head>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='style.css' rel='stylesheet' type='text/css'>
 <title>Hip Hop</title>
 
 </head>
@@ -91,6 +17,22 @@
 	            The bizzle nec own yo' izzle bizzle bibendum owned. Vivamizzle uhuh ... yih! tortor vizzle massa. Fo shizzle malesuada ornare magna. Sizzle commodo, nisl nec yo egestizzle, magna dope vestibulum ligula, shit auctizzle go to hizzle dolor dope augue. Maecenas izzle elizzle cool break it down eros adipiscing sagittizzle. Sure tempizzle pede ut sizzle. In rhoncus pimpin' leo. Lorizzle i saw beyonces tizzles and my pizzle went crizzle dolor sit izzle, mofo adipiscing that's the shizzle. Phasellizzle nisi shut the shizzle up, posuere crazy amet, facilisizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle, tristique , libero. Yo semper faucibizzle dizzle. Ut nizzle fo shizzle my nizzle. Nunc dang risizzle doggy diam mah nizzle tellivizzle. Quisque condimentum sure laoreet nunc. Aenizzle sodales, nisi quis stuff tellivizzle, lectus dizzle commodo felis, nizzle my shizz erizzle nisl quis fo shizzle my nizzle. Vivamizzle boofron quizzle, i saw beyonces tizzles and my pizzle went crizzle sit pizzle, ornare tellivizzle, pulvinizzle pulvinar, felis.
 	            </p>
 	        </div>
+	    </div>
+	    <div id="barsSection">
+	       <div id="wordBars"></div>
+	       <div id="barsBlurb">
+	       <h2>Secondary Title</h2>
+	       	<p>
+	       	The bizzle nec own yo' izzle bizzle bibendum owned. Vivamizzle uhuh ... yih! tortor vizzle massa. Fo shizzle malesuada ornare magna. Sizzle commodo, nisl nec yo egestizzle, magna dope vestibulum ligula, shit auctizzle go to hizzle dolor dope augue. Maecenas izzle elizzle cool break it down eros adipiscing sagittizzle. 
+	       	</p>
+	       	<div id="regionChecks">
+	       	   <input name="westCoastCheck" id="westCoastCheck" type="checkbox" checked="yes">West Coast
+               <input name="midewestCheck" id="midwestCheck" type="checkbox" checked="yes">Midwest
+               <input name="southernCheck" id="southernCheck" type="checkbox" checked="yes">Southern
+               <input name="eastCoastCheck" id="eastCoastCheck" type="checkbox" checked="yes">East Coast
+
+	       	</div>
+	       </div>
 	    </div>
 	    <div id="top20Lists">
 	        <div class="wordList">
@@ -110,7 +52,7 @@
 	            <ol id="eastCoastTop20"></ol>
 	        </div>
 	    </div>
-	    <div id="wordBars"></div>
+
 	</div>
 <script type="text/javascript" src="js/require_config.DEBUG.js"></script>
 <script type="text/javascript" src="lib/require.js" data-main="visualize.js"></script>
