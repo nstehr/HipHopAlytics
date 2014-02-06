@@ -9,18 +9,22 @@
 .east-coast{
 	fill:#1abc9c;
 	stroke: #1abc9c;
+	color: #1abc9c;
 }
 .west-coast{
 	fill:#2ecc71;
 	stroke: #2ecc71;
+	color: #2ecc71;
 }
 .southern{
 	fill:#3498db;
 	stroke: #3498db;
+	color: #3498db;
 }
 .midwest{
 	fill:#9b59b6;
 	stroke: #9b59b6;
+	color: #9b59b6;
 }
 .hidden{
 	fill: transparent;

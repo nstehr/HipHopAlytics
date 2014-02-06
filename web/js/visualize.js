@@ -43,30 +43,40 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
         	$("#westCoastCheck").change(function() {
                 if(this.checked) {
                    handleChecked('West Coast',lyricData);
+                   $("#westCoastFreq").removeClass("wordFade");
                 } else {
                    handleUnChecked('West Coast',lyricData);
+                   $("#westCoastFreq").addClass("wordFade");
                 }
             });
             $("#midwestCheck").change(function() {
                 if(this.checked) {
                    handleChecked('Midwest',lyricData);
+                   $("#midwestFreq").removeClass("wordFade");
                 } else {
                    handleUnChecked('Midwest',lyricData);
+                   $("#midwestFreq").addClass("wordFade");
+           
                 }
             });
             $("#southernCheck").change(function() {
                 if(this.checked) {
                     handleChecked('Southern',lyricData);
+                    $("#southernFreq").removeClass("wordFade");
                 } else {
                     handleUnChecked('Southern', lyricData);
+                    $("#southernFreq").addClass("wordFade");
+           
                 }
             });
             $("#eastCoastCheck").change(function() {
                 if(this.checked) {
                     handleChecked('East Coast',lyricData);
+                    $("#eastCoastFreq").removeClass("wordFade");
                 } else {
                     handleUnChecked('East Coast',lyricData);
-                }
+                    $("#eastCoastFreq").addClass("wordFade");
+            }
             });
         }
 
@@ -235,25 +245,31 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
         }
 
         function handleBarChartClicked(wordData){
-        	for(var i=0;i<wordData.length;i++){
+            
+            $("#midwestFreq").html("");
+            $("#southernFreq").html("");
+            $("#eastCoastFreq").html("");
+            $("#westCoastFreq").html("");
+        	
+            for(var i=0;i<wordData.length;i++){
         		var word = wordData[i];
         		var frequentAppears = word.frequentAppears;
         		if(frequentAppears.length > 10){
         			frequentAppears = _.first(frequentAppears, [10]);
         		}
         		var frequentAppearsStr = frequentAppears + "";
-        		console.log(frequentAppearsStr);
-                if(word.region == 'Midwest'){
-                  
+        		var commonWord = word.commonWord;
+                if(word.region === 'Midwest'){
+                  $("#midwestFreq").html("In the "+"<span class='midwest'>"+"Midwest</span>, <span class='wordHover'>"+commonWord+"</span> frequently appears with: "+frequentAppearsStr);
                 }
-                else if(word.region == 'Southern'){
-
+                else if(word.region === 'Southern'){
+                  $("#southernFreq").html("In the "+"<span class='southern'>"+"South</span>, <span class='wordHover'>"+commonWord+"</span> frequently appears with: "+frequentAppearsStr);
                 }
-                else if(word.region == 'East Coast'){
-
+                else if(word.region === 'East Coast'){
+                  $("#eastCoastFreq").html("On the "+"<span class='east-coast'>"+"East Coast</span>, <span class='wordHover'>"+commonWord+"</span> frequently appears with: "+frequentAppearsStr);
                 }
-                else if(word.region == 'West Coast'){
-
+                else if(word.region === 'West Coast'){
+                  $("#westCoastFreq").html("On the "+"<span class='west-coast'>"+"West Coast</span>, <span class='wordHover'>"+commonWord+"</span> frequently appears with: "+frequentAppearsStr);
                 }
         	}
         }
