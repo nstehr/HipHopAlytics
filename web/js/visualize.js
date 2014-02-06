@@ -73,7 +73,7 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
         function handleChecked(region, lyricData){
             var words = lyricData[region].commonWords;
                   for(var i=0;i<words.length;i++){
-                  	words[i].idf_score = words[i].idf_score_orig;
+                  	words[i].rank = words[i].rank_orig;
                   }
                 renderWordBarCharts(lyricData);
         }
@@ -81,8 +81,8 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
         function handleUnChecked(region, lyricData){
             var words = lyricData[region].commonWords;
                   for(var i=0;i<words.length;i++){
-                  	words[i].idf_score_orig = words[i].idf_score;
-                  	words[i].idf_score = 1;
+                  	words[i].rank_orig = words[i].rank;
+                  	words[i].rank = 21;
                   }
                   renderWordBarCharts(lyricData);
         }
@@ -116,14 +116,14 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
            var hiddenCount = 0;
            for(var i=0;i<wordData.length;i++){
                var data = wordData[i];
-               if(data.idf_score == 1){
+               if(data.rank == 21){
                	    hiddenCount++;
                }
            }
 
            var x = d3.scale.linear().domain([0, wordData.length]).range([0, barChartWidth]);
            var x1 = d3.scale.linear().domain([0, wordData.length-hiddenCount]).range([0,barChartWidth-(hiddenCount*barWidth)]);
-	       var y = d3.scale.linear().domain([1, 0])
+	       var y = d3.scale.linear().domain([21, 1])
 			  .range([0, barChartHeight]);
 
 		var barGroup = barGraph.selectAll("g");
@@ -139,7 +139,7 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
 	   .append("rect")
 	   .attr("x", function(d, i) { return x(i); })
 	   .attr("y",  function(d) { return barChartHeight; })
-       .attr("height", function(d) { return y(d.idf_score); })
+       .attr("height", function(d) { return y(d.rank); })
 	   .attr("width", barWidth)
 	   .attr("stroke", "black")
 	   .attr("class", function(d){
@@ -155,9 +155,9 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
 
        var updatedIndex = 0;
        bars.transition().duration(1000)
-	     .attr("y", function(d) { return barChartHeight - y(d.idf_score); })
-         .attr("height", function(d) { return y(d.idf_score); })
-         .attr("x", function(d,i){ var result = (d.idf_score < 1) ? x1(updatedIndex++) : x(i); return result});
+	     .attr("y", function(d) { return barChartHeight - y(d.rank); })
+         .attr("height", function(d) { return y(d.rank); })
+         .attr("x", function(d,i){ var result = (d.rank < 21) ? x1(updatedIndex++) : x(i); return result});
 
        
 
@@ -171,6 +171,13 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
              .text(word)
              .style("fill", "black")
              .style("stroke", "black");
+         }
+         else{
+         	if(wordData.length-hiddenCount == 0){
+         		wordText.attr("class", "barWord wordFade");
+         	} else {
+         		wordText.attr("class", "barWord");
+         	}
          }
         	
         }
