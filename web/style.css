@@ -1,3 +1,8 @@
+body
+{
+background-color:#F4F4F4;
+}
+
 .states {
   fill: none;
   /*stroke: #ecf0f1;*/
@@ -7,24 +12,24 @@
 }
 
 .east-coast{
-	fill:#1abc9c;
-	stroke: #1abc9c;
-	color: #1abc9c;
+	fill:#0272FC;
+	stroke: #0272FC;
+	color: #0272FC;
 }
 .west-coast{
-	fill:#2ecc71;
-	stroke: #2ecc71;
-	color: #2ecc71;
+	fill: #0A4288;
+	stroke: #0A4288;
+	color: #0A4288;
 }
 .southern{
-	fill:#3498db;
-	stroke: #3498db;
-	color: #3498db;
+	fill: #F20530;
+	stroke: #F20530;
+	color: #F20530;
 }
 .midwest{
-	fill:#9b59b6;
-	stroke: #9b59b6;
-	color: #9b59b6;
+	fill: #FF8800;
+	stroke: #FF8800;
+	color: #FF8800;
 }
 .hidden{
 	fill: transparent;

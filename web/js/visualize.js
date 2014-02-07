@@ -257,7 +257,9 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
         		if(frequentAppears.length > 10){
         			frequentAppears = _.first(frequentAppears, [10]);
         		}
-        		var frequentAppearsStr = frequentAppears + "";
+                frequentAppears = _.uniq(frequentAppears);
+                console.log(frequentAppears);
+        		var frequentAppearsStr = frequentAppears.join();
         		var commonWord = word.commonWord;
                 if(word.region === 'Midwest'){
                   $("#midwestFreq").html("In the "+"<span class='midwest'>"+"Midwest</span>, <span class='wordHover'>"+commonWord+"</span> frequently appears with: "+frequentAppearsStr);
