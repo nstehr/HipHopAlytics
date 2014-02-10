@@ -30,7 +30,7 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
 
 
         function dataLoaded(error,us,regionData,lyricData){
-	         drawMap(us,regionData);
+	         drawMap(us,regionData, lyricData);
 	         
 	         //create empty graphs for all the unique words
 	         createWordBarGraphs(lyricData);
@@ -178,7 +178,7 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
        if(wordText.empty()){
 	       barGroup.append("text")
              .attr("x", 0)
-             .attr("y", barChartHeight - .5)
+             .attr("y", barChartHeight + 15)
              .attr("class", "barWord")
              .text(word)
              .style("fill", "black")
@@ -316,7 +316,7 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
 
         }
 
-        function drawMap(us,regionData) {
+        function drawMap(us,regionData,lyricData) {
 			        for(var i=0;i<regions.length;i++){
 				          var region = regions[i];
 				          var states = regionData[region];
@@ -344,7 +344,42 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
 							else
 							     return "hidden";
 						   })
-						 .attr("d", path);
+						 .attr("d", path)
+						 .on('mouseover',function(d){
+						 	var region = statesToRegion.get(d.properties.name);
+						 	var numSongs = lyricData[region].numSongs;
+						 	var numArtists = lyricData[region].numArtists;
+						 	var rappers;
+                            if(region === "East Coast")
+							    rappers = ['50 Cent', 'Biggie Smalls', "Jay-Z", 'Nas']
+							else if(region === "West Coast")
+							    rappers = ['Dr. Dre', 'Snoop Dogg', 'Tupac Shakur', 'Ice Cube', 'Easy-E'];
+							else if(region === "Midwest")
+							    rappers = ['Eminem', 'Machine Gun Kelly', 'Common', 'Atmosphere', 'Kanye West']
+							else if(region === "Southern")
+							    rappers = ['B.o.B','Flo Rida','Outkast','Lil John','Lil Wayne'];
+                          
+                             var rapperString = rappers.join();
+
+                              $("#region").html("<span class='wordHover'>"+region+"</span>")
+                              $("#numSongs").html("Number of songs analyzed: "+numSongs);
+                              $("#numArtists").html("Number of artists analyzed: "+numArtists);
+                              $("#artistSample").html("Includes artists such as "+rapperString);
+
+                              var tooltip = $("#tooltip");
+		                      tooltip.show();
+		                      tooltip.css({'top':d3.event.pageY,'left':d3.event.pageX});
+
+						 })
+                           .on("mousemove",function(d){
+			                $("#tooltip").css({
+		                   left:  d3.event.pageX + 10,
+		                   top:   d3.event.pageY + 20
+		                  });
+	                   })
+	               .on("mouseout",function(d){
+		                 $("#tooltip").hide();
+		           });
 
 					//draws a path for the inner borders states
 					//West Coast
@@ -374,6 +409,7 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
 						}))
 					   .attr("d",path)
 					   .attr("class","states");
+
 					   //Midwest
 						svg.append("path")
 						   .datum(topojson.mesh(us,us.objects.states,function(a,b){
