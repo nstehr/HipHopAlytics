@@ -39,48 +39,22 @@ background-color:#F4F4F4;
 	font-family: 'Roboto', sans-serif;
 }
 
-#mapAndBlurb{
-	display:flex;
-    flex-wrap:wrap;
-}
-#mapAndBlurb > div{
-	flex: 1 0 20px;
-}
+.row.full-width { width: 100%; max-width: 100%; }
+
 #map{
-	padding:10px;
-    margin:10px;
-}
-#barsBlurb{
-	padding:10px;
-    margin:10px;
+  padding:5px;
+    margin:5px;
 }
 
-#top20Lists{
-    display:flex;
-    flex-wrap:wrap;
-    margin: 30px;
-}
 #barsSection{
-	display:flex;
-    flex-wrap:wrap;
+  padding-top: 20px;
 }
-#barsSection > div{
-	flex: 1 0 20px;
-}
-#wordBars{
-	display:flex;
-	flex-wrap:wrap;
-	margin: 30px;
-	width: 900px;
-}
+
 .bars{
-	flex: 1 0 100px;
-	padding-top: 15px;
-	padding-bottom: 5px;
+	height:130px;
+
 }
-.wordList{
-	flex: 1 0 200px;
-}
+
 .wordList li{
 	width:50px;
 }
@@ -97,7 +71,7 @@ background-color:#F4F4F4;
     border: 1px solid black;
     border-radius:5px;
     background: #fff;
-	opacity: .8;
+	opacity: .9;
 	padding: 5px 10px;
 	z-index: 10;
 }

@@ -1,26 +1,37 @@
 <!doctype html>
 
 <html>
-<head>
+<head class="no-js" lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="foundation.css">
 <link href='style.css' rel='stylesheet' type='text/css'>
+
+<script src="lib/vendor/modernizr.js"></script>
+
 <title>Hip Hop</title>
 
 </head>
 <body>
     <div id="container">
-	    <div id="mapAndBlurb">
-	        <div id="map"></div>
-	        <div id="blurb">
+	    <div id="mapAndBlurb" class="row full-width">
+	        <div id="map" class="large-5 columns"></div>
+	        <div id="blurb" class="large-6 columns">
 	            <h2>Amazingly Cool Title Goes Here</h2>
 	            <p>
 	            The bizzle nec own yo' izzle bizzle bibendum owned. Vivamizzle uhuh ... yih! tortor vizzle massa. Fo shizzle malesuada ornare magna. Sizzle commodo, nisl nec yo egestizzle, magna dope vestibulum ligula, shit auctizzle go to hizzle dolor dope augue. Maecenas izzle elizzle cool break it down eros adipiscing sagittizzle. Sure tempizzle pede ut sizzle. In rhoncus pimpin' leo. Lorizzle i saw beyonces tizzles and my pizzle went crizzle dolor sit izzle, mofo adipiscing that's the shizzle. Phasellizzle nisi shut the shizzle up, posuere crazy amet, facilisizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle, tristique , libero. Yo semper faucibizzle dizzle. Ut nizzle fo shizzle my nizzle. Nunc dang risizzle doggy diam mah nizzle tellivizzle. Quisque condimentum sure laoreet nunc. Aenizzle sodales, nisi quis stuff tellivizzle, lectus dizzle commodo felis, nizzle my shizz erizzle nisl quis fo shizzle my nizzle. Vivamizzle boofron quizzle, i saw beyonces tizzles and my pizzle went crizzle sit pizzle, ornare tellivizzle, pulvinizzle pulvinar, felis.
 	            </p>
 	        </div>
 	    </div>
-	    <div id="barsSection">
-	       <div id="wordBars"></div>
-	       <div id="barsBlurb">
+	    <div id="barsSection" class="row full-width">
+	    <div class="large-6 columns">
+	       <ul id="wordBars" class="large-block-grid-6"></ul>
+	     </div>
+	       <div id="barsBlurb" class="large-6 columns">
 	       <h2>Secondary Title</h2>
 	       	<p>
 	       	The bizzle nec own yo' izzle bizzle bibendum owned. Vivamizzle uhuh ... yih! tortor vizzle massa. Fo shizzle malesuada ornare magna. Sizzle commodo, nisl nec yo egestizzle, magna dope vestibulum ligula, shit auctizzle go to hizzle dolor dope augue. Maecenas izzle elizzle cool break it down eros adipiscing sagittizzle. 
@@ -39,20 +50,20 @@
            </div>
 	       </div>
 	    </div>
-	    <div id="top20Lists">
-	        <div class="wordList">
+	    <div id="top20Lists" class="row full-width">
+	        <div class="large-3 columns wordList">
 	            <h3>West Coast</h3>
 	            <ol id="westCoastTop20"></ol>
 	         </div>
-	        <div class="wordList">
+	        <div class="large-3 columns wordList">
 	            <h3>Midwest</h3>
 	            <ol id="midwestTop20"></ol>
 	        </div>
-	        <div class="wordList">
+	        <div class="large-3 columns wordList">
 	            <h3>Southern</h3>
 	            <ol id="southernTop20"></ol>
 	        </div>
-	        <div class="wordList">
+	        <div class="large-3 columns wordList">
 	            <h3>East Coast</h3>
 	            <ol id="eastCoastTop20"></ol>
 	        </div>
@@ -69,5 +80,11 @@
 	 
 <script type="text/javascript" src="js/require_config.DEBUG.js"></script>
 <script type="text/javascript" src="lib/require.js" data-main="visualize.js"></script>
+<!--TODO: use require for this and move to require_config -->
+<script src="lib/jquery/jquery-1.9.1.js"></script>
+ <script src="lib/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 </html>

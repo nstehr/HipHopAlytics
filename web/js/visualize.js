@@ -109,7 +109,7 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
         	
             var words = createWordUnion(lyricData);
              for (var word in words){
-            	d3.select("#wordBars").append("svg")
+            	d3.select("#wordBars").append("li").append("svg")
         	                .attr("width", barChartWidth)
         	                .attr("height", barChartHeight)
         	                .attr("id", word)
@@ -178,7 +178,7 @@ require(['knockout','jquery','d3','topojson','queue','underscore'],
        if(wordText.empty()){
 	       barGroup.append("text")
              .attr("x", 0)
-             .attr("y", barChartHeight + 15)
+             .attr("y", barChartHeight +15)
              .attr("class", "barWord")
              .text(word)
              .style("fill", "black")
