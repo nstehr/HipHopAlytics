@@ -66,6 +66,11 @@ background-color:#F4F4F4;
 	opacity:0.2;
 }
 
+.emphasis{
+   font-weight:900;
+   font-size:120%;
+}
+
 #tooltip{
 	position: absolute;
     border: 1px solid black;
