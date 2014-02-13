@@ -55,6 +55,9 @@ background-color:#F4F4F4;
 
 }
 
+#top20Lists{
+ margin-left: 10px;
+}
 .wordList li{
 	width:50px;
 }
