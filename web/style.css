@@ -68,7 +68,20 @@ background-color:#F4F4F4;
 
 .emphasis{
    font-weight:900;
-   font-size:120%;
+   font-size:110%;
+}
+
+#divider{
+	margin: 15px;
+	background:black; 
+	border:0; 
+	height:1px;
+	width:95%;
+}
+
+.credit{
+	font-size:80%;
+	margin: 15px;
 }
 
 #tooltip{
